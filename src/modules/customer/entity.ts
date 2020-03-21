@@ -1,15 +1,19 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
+import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class CustomerEntity {
-  @PrimaryColumn()
+export class Customer {
+  @PrimaryGeneratedColumn()
   customerId: number;
+
   @Column({ length: 50, nullable: false })
   firstName: string;
-  @Column({ length: 50, nullable: false })
-  middleName: string;
+
   @Column({ length: 50, nullable: true })
+  middleName: string;
+
+  @Column({ length: 50, nullable: false })
   lastName: string;
+
   @Column({ nullable: true })
   age: number;
 }

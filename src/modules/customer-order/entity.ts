@@ -1,25 +1,17 @@
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  OneToMany,
-  OneToOne,
-  PrimaryColumn
-} from "typeorm";
-import { CustomerEntity } from "../customer/entity";
-import { ItemEntity } from "../item/entity";
+import { Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
+import { Customer } from "../customer/entity";
+import { Item } from "../item/entity";
 
 @Entity()
-export class CustomerOrderEntity {
+export class CustomerOrder {
   @PrimaryColumn()
   customerOrderId: number;
 
-  @ManyToOne(type => CustomerEntity)
+  @ManyToOne(type => Customer)
   @JoinColumn({ name: "customerId" })
-  customer: CustomerEntity;
+  customer: Customer;
 
-  @ManyToOne(type => ItemEntity)
+  @ManyToOne(type => Item)
   @JoinColumn({ name: "itemId" })
-  item: ItemEntity;
+  item: Item;
 }
