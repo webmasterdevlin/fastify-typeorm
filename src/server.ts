@@ -5,6 +5,8 @@ import { Options } from "./config/swagger";
 import db from "./plugins/db";
 import healthHandler from "./modules/health/routes";
 import customerHandler from "./modules/customer/routes";
+import customerOrderHandler from "./modules/customer-order/routes";
+import itemHandler from "./modules/item/routes";
 
 function createServer() {
   const server = fastify({ logger: true });
@@ -13,6 +15,8 @@ function createServer() {
   server.register(db);
   server.register(healthHandler);
   server.register(customerHandler);
+  server.register(customerOrderHandler);
+  server.register(itemHandler);
 
   server.setErrorHandler((error, req, res) => {
     req.log.error(error.toString());

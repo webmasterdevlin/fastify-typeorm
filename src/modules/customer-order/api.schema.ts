@@ -1,6 +1,6 @@
 export const apiSchema = {
   description: "Create a new hero",
-  tags: ["heroes"],
+  tags: ["customerOrders"],
   summary: "Creates new hero with given values",
   body: {
     type: "object",
@@ -8,8 +8,8 @@ export const apiSchema = {
       firstName: { type: "string" },
       lastName: { type: "string" },
       house: { type: "string" },
-      knownAs: { type: "string" }
-    }
+      knownAs: { type: "string" },
+    },
   },
   response: {
     200: {
@@ -21,8 +21,8 @@ export const apiSchema = {
         lastName: { type: "string" },
         house: { type: "string" },
         knownAs: { type: "string" },
-        __v: { type: "number" }
-      }
-    }
-  }
+        __v: { type: "number" },
+      },
+    },
+  },
 };

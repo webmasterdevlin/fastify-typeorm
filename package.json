@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "boom": "^7.3.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "fastify": "^2.13.0",
@@ -37,7 +38,7 @@
     "@types/node": "^13.9.2",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.0",
     "tap": "^12.5.3",
     "ts-jest": "^25.2.1",
     "ts-node": "^8.7.0",
