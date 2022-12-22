@@ -22,7 +22,7 @@
     "fastify-autoload": "^1.2.2",
     "fastify-cli": "^1.5.0",
     "fastify-helmet": "^3.0.2",
-    "fastify-jwt": "^1.2.1",
+    "fastify-jwt": "^4.2.0",
     "fastify-oas": "^2.5.2",
     "fastify-plugin": "^1.6.1",
     "fastify-swagger": "^2.5.0",
